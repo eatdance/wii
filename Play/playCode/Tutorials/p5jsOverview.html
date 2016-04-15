@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html class=" is-copy-enabled" lang="en"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <link crossorigin="anonymous" href="p5jsOverview_files/frameworks-c5cd2ba67aee15dbe66a1911d55456974cf01cf43b09716f4.css" integrity="sha256-xc0rpnruFdvmahkR1VRWl0zwHPQ7CXFvSa7m2R1trKQ=" media="all" rel="stylesheet">
+    <link crossorigin="anonymous" href="p5jsOverview_files/github-41234c54b27c35a470af0756de2199addaa8f9bc47b98caccc775.css" integrity="sha256-QSNMVLJ8NaRwrwdW3iGZrdqo+bxHuYyszHdUzbrU5IA=" media="all" rel="stylesheet">
+    
+    
+    
+    
+
+    <link as="script" href="p5jsOverview_files/frameworks-7d972a322dae1542abb7cb60f0de07aea97b141be4e33ab42e.js" rel="preload">
+    <link as="script" href="p5jsOverview_files/github-7f158629d2948c9cf8a1d9338379fa68abd038bb815299a8fb076c.js" rel="preload">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=1020">
+    
+    
+    <title>p5.js overview · processing/p5.js Wiki</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" href="https://github.com/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://github.com/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://github.com/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://github.com/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://github.com/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://github.com/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://github.com/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://github.com/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://github.com/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/apple-touch-icon-180x180.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="https://avatars0.githubusercontent.com/u/1617169?v=3&amp;s=400" name="twitter:image:src"><meta content="@github" name="twitter:site"><meta content="summary" name="twitter:card"><meta content="processing/p5.js" name="twitter:title"><meta content="p5.js is a JS client-side library for creating graphic and interactive experiences, based on the core principles of Processing. http://twitter.com/p5xjs —" name="twitter:description">
+      <meta content="https://avatars0.githubusercontent.com/u/1617169?v=3&amp;s=400" property="og:image"><meta content="GitHub" property="og:site_name"><meta content="object" property="og:type"><meta content="processing/p5.js" property="og:title"><meta content="https://github.com/processing/p5.js" property="og:url"><meta content="p5.js is a JS client-side library for creating graphic and interactive experiences, based on the core principles of Processing. http://twitter.com/p5xjs —" property="og:description">
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/MTUzMDk2MTM6NGFkZmRmODg1Njg4YjI2MDU0NmQ4NzUzY2I0NzQ4NDg6ZTY5NmFmMzkyZGI0YTQzNGEyZjk1OTQ5YmEwMjZmYjE0ZjFkYmRlZTQ4YTFmMTBhNGQ5YThiMDkyZTZlMzY4Mg==--b391be628c5c4d00c28525dc6488fda94734aaa0">
+    <meta name="pjax-timeout" content="1000">
+    <link rel="sudo-modal" href="https://github.com/sessions/sudo_modal">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_wiki" data-pjax-transient="">
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host"><meta content="github" name="octolytics-app-id"><meta content="68B3C98B:7CE2:11CE4B91:56F55839" name="octolytics-dimension-request_id"><meta content="15309613" name="octolytics-actor-id"><meta content="eatdance" name="octolytics-actor-login"><meta content="317a424d7ea5601dfcc9670116db146278db3c8766d1e4c44d46b53611ad8d93" name="octolytics-actor-hash">
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/wiki/show" data-pjax-transient="true" name="analytics-location">
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="eatdance">
+
+        <meta name="expected-hostname" content="github.com">
+      <meta name="js-proxy-site-detection-payload" content="NjZlNDllZjNlMjExMmQ5NTZkZTE5MmVlMjhiYmM3YTEzNDg2ZWVjNmFlZmI3OTUwMjI1NmIzYjI2MjI4Yzg1ZXx7InJlbW90ZV9hZGRyZXNzIjoiMTA0LjE3OS4yMDEuMTM5IiwicmVxdWVzdF9pZCI6IjY4QjNDOThCOjdDRTI6MTFDRTRCOTE6NTZGNTU4MzkiLCJ0aW1lc3RhbXAiOjE0NTg5MTk0ODJ9">
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta content="626e801d04b847ab8d9aed221814ac521db5c0d5" name="form-nonce">
+
+    <meta http-equiv="x-pjax-version" content="6728e1e25b5a2d3e558a4b3d5c113520">
+    
+
+      
+  <meta name="description" content="p5.js is a JS client-side library for creating graphic and interactive experiences, based on the core principles of Processing. http://twitter.com/p5xjs —">
+  <meta name="go-import" content="github.com/processing/p5.js git https://github.com/processing/p5.js.git">
+
+  <meta content="1617169" name="octolytics-dimension-user_id"><meta content="processing" name="octolytics-dimension-user_login"><meta content="8424040" name="octolytics-dimension-repository_id"><meta content="processing/p5.js" name="octolytics-dimension-repository_nwo"><meta content="true" name="octolytics-dimension-repository_public"><meta content="false" name="octolytics-dimension-repository_is_fork"><meta content="8424040" name="octolytics-dimension-repository_network_root_id"><meta content="processing/p5.js" name="octolytics-dimension-repository_network_root_nwo">
+  <link href="https://github.com/processing/p5.js/commits/master.atom" rel="alternate" title="Recent Commits to p5.js:master" type="application/atom+xml">
+
+
+  </head>
+
+
+  <body class="logged-in   env-production linux vis-public">
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"></div>
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+        <div class="header header-logged-in true" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <svg aria-hidden="true" class="octicon octicon-mark-github" height="28" role="img" version="1.1" viewBox="0 0 16 16" width="28"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg>
+</a>
+
+
+        <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/processing/p5.js/search" class="js-site-search-form" data-scoped-search-url="/processing/p5.js/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+      <div class="header-search-scope">This repository</div>
+      <input class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable" data-hotkey="s" name="q" placeholder="Search" aria-label="Search this repository" data-unscoped-placeholder="Search GitHub" data-scoped-placeholder="Search" tabindex="1" autocapitalize="off" type="text">
+    </label>
+</form></div>
+
+
+      <ul class="header-nav left" role="navigation">
+        <li class="header-nav-item">
+          <a href="https://github.com/pulls" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+            Pull requests
+</a>        </li>
+        <li class="header-nav-item">
+          <a href="https://github.com/issues" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+            Issues
+</a>        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav right" id="user-links">
+  <li class="header-nav-item">
+    
+    <a href="https://github.com/notifications" aria-label="You have unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s js-socket-channel js-notification-indicator" data-channel="notification-changed-v2:15309613" data-ga-click="Header, go to notifications, icon:unread" data-hotkey="g n">
+        <span class="mail-status unread"></span>
+        <svg aria-hidden="true" class="octicon octicon-bell" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 12v1H0v-1l0.73-0.58c0.77-0.77 0.81-2.55 1.19-4.42 0.77-3.77 4.08-5 4.08-5 0-0.55 0.45-1 1-1s1 0.45 1 1c0 0 3.39 1.23 4.16 5 0.38 1.88 0.42 3.66 1.19 4.42l0.66 0.58z m-7 4c1.11 0 2-0.89 2-2H5c0 1.11 0.89 2 2 2z"></path></svg>
+</a>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="https://github.com/new" aria-label="Create new…" data-ga-click="Header, create new, icon:add">
+      <svg aria-hidden="true" class="octicon octicon-plus left" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="https://github.com/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+
+  <a class="dropdown-item" href="https://github.com/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="processing/p5.js">This repository</span>
+  </div>
+    <a class="dropdown-item" href="https://github.com/processing/p5.js/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+
+      </ul>
+    </div>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name tooltipped tooltipped-sw js-menu-target" href="https://github.com/eatdance" aria-label="View profile and more" data-ga-click="Header, show menu, icon:avatar">
+      <img alt="@eatdance" class="avatar" src="p5jsOverview_files/15309613.png" height="20" width="20">
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <div class="dropdown-menu  dropdown-menu-sw">
+        <div class=" dropdown-header header-nav-current-user css-truncate">
+            Signed in as <strong class="css-truncate-target">eatdance</strong>
+
+        </div>
+
+
+        <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="https://github.com/eatdance" data-ga-click="Header, go to profile, text:your profile">
+            Your profile
+          </a>
+        <a class="dropdown-item" href="https://github.com/stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a>
+          <a class="dropdown-item" href="https://github.com/explore" data-ga-click="Header, go to explore, text:explore">
+            Explore
+          </a>
+          <a class="dropdown-item" href="https://github.com/integrations" data-ga-click="Header, go to integrations, text:integrations">
+            Integrations
+          </a>
+        <a class="dropdown-item" href="https://help.github.com/" data-ga-click="Header, go to help, text:help">
+          Help
+        </a>
+
+
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="https://github.com/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+            Settings
+          </a>
+
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="626e801d04b847ab8d9aed221814ac521db5c0d5" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"><input name="authenticity_token" value="+Z8HC9oIw2tKjj+nYZc7YbMQR05StdEUhlMqvzxuO9fwqLhJb5YHJupahedlqcS1Vk0GzZNv5mreQMTiexxQsw==" type="hidden"></div>
+            <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+              Sign out
+            </button>
+</form>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+    
+  </div>
+</div>
+
+
+      
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main" class="main-content">
+        <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container="">
+      
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-form-nonce="626e801d04b847ab8d9aed221814ac521db5c0d5" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"><input name="authenticity_token" value="+roVjqYlp0/SKoEW+q2FLso9i2WJCoTyVcQEgDlOJoApoy4L488sIFqlOkGfTKQeLIPwC18FuOHdUKWMRiqP2g==" type="hidden"></div>      <input class="form-control" id="repository_id" name="repository_id" value="8424040" type="hidden">
+
+        <div class="select-menu js-menu-container js-select-menu">
+          <a href="https://github.com/processing/p5.js/subscription" class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true" data-ga-click="Repository, click Watch settings, action:wiki#show">
+            <span class="js-select-button">
+              <svg aria-hidden="true" class="octicon octicon-eye" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6c4.94 0 7.94-6 7.94-6S13 2 8.06 2z m-0.06 10c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4z m2-4c0 1.11-0.89 2-2 2s-2-0.89-2-2 0.89-2 2-2 2 0.89 2 2z"></path></svg>
+              Watch
+            </span>
+          </a>
+          <a class="social-count js-social-count" href="https://github.com/processing/p5.js/watchers">
+            273
+          </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+            <div class="select-menu-header js-navigation-enable" tabindex="-1">
+              <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75-1.48-1.48 3.75-3.75L0.77 4.25l1.48-1.48 3.75 3.75 3.75-3.75 1.48 1.48-3.75 3.75z"></path></svg>
+              <span class="select-menu-title">Notifications</span>
+            </div>
+
+              <div class="select-menu-list js-navigation-container" role="menu">
+
+                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5L4 13 0 9l1.5-1.5 2.5 2.5 6.5-6.5 1.5 1.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input checked="checked" id="do_included" name="do" value="included" type="radio">
+                    <span class="select-menu-item-heading">Not watching</span>
+                    <span class="description">Be notified when participating or @mentioned.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6c4.94 0 7.94-6 7.94-6S13 2 8.06 2z m-0.06 10c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4z m2-4c0 1.11-0.89 2-2 2s-2-0.89-2-2 0.89-2 2-2 2 0.89 2 2z"></path></svg>
+                      Watch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5L4 13 0 9l1.5-1.5 2.5 2.5 6.5-6.5 1.5 1.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_subscribed" name="do" value="subscribed" type="radio">
+                    <span class="select-menu-item-heading">Watching</span>
+                    <span class="description">Be notified of all conversations.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6c4.94 0 7.94-6 7.94-6S13 2 8.06 2z m-0.06 10c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4z m2-4c0 1.11-0.89 2-2 2s-2-0.89-2-2 0.89-2 2-2 2 0.89 2 2z"></path></svg>
+                      Unwatch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5L4 13 0 9l1.5-1.5 2.5 2.5 6.5-6.5 1.5 1.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_ignore" name="do" value="ignore" type="radio">
+                    <span class="select-menu-item-heading">Ignoring</span>
+                    <span class="description">Never be notified.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-mute" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8 2.81v10.38c0 0.67-0.81 1-1.28 0.53L3 10H1c-0.55 0-1-0.45-1-1V7c0-0.55 0.45-1 1-1h2l3.72-3.72c0.47-0.47 1.28-0.14 1.28 0.53z m7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06 1.97 1.97-1.97 1.97 1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06-1.97-1.97 1.97-1.97z"></path></svg>
+                      Stop ignoring
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/processing/p5.js/unstar" class="js-toggler-form starred" data-form-nonce="626e801d04b847ab8d9aed221814ac521db5c0d5" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"><input name="authenticity_token" value="UMAa5VJcDlTzDv1fZHYDiMk+uAKTcKgY71jeNrXtJSRvYq1cVOp6373OMuVj1EHdmed4+3hE6n2B3vpDuBz41A==" type="hidden"></div>
+      <button class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar processing/p5.js" data-ga-click="Repository, click unstar button, action:wiki#show; text:Unstar">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/processing/p5.js/stargazers">
+          3,597
+        </a>
+</form>
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/processing/p5.js/star" class="js-toggler-form unstarred" data-form-nonce="626e801d04b847ab8d9aed221814ac521db5c0d5" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"><input name="authenticity_token" value="QX36/5SV8KCrCq7iWHf51xlCyen+LT+VrcqfCRf1Z5PLnNGt1EfyYGJ3/B3JYapk6Dlo4VKotGdcplgLTFxb2g==" type="hidden"></div>
+      <button class="btn btn-sm btn-with-count js-toggler-target" aria-label="Star this repository" title="Star processing/p5.js" data-ga-click="Repository, click star button, action:wiki#show; text:Star">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/processing/p5.js/stargazers">
+          3,597
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/processing/p5.js/fork" class="btn-with-count" data-form-nonce="626e801d04b847ab8d9aed221814ac521db5c0d5" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"><input name="authenticity_token" value="e07Ei4BzQWkAgbBg4urfo2kjsyXRwXQZr0lXGx6aWPGRk5grkh552h+sgyzFh/oVmAbmhkgdLvlB1CmpnNRrZA==" type="hidden"></div>
+            <button type="submit" class="btn btn-sm btn-with-count" data-ga-click="Repository, show fork modal, action:wiki#show; text:Fork" title="Fork your own copy of processing/p5.js to your account" aria-label="Fork your own copy of processing/p5.js to your account">
+              <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" role="img" version="1.1" viewBox="0 0 10 16" width="10"><path d="M8 1c-1.11 0-2 0.89-2 2 0 0.73 0.41 1.38 1 1.72v1.28L5 8 3 6v-1.28c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v1.78l3 3v1.78c-0.59 0.34-1 0.98-1 1.72 0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.73-0.41-1.38-1-1.72V9.5l3-3V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2zM2 4.2c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m3 10c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m3-10c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
+              Fork
+            </button>
+</form>
+    <a href="https://github.com/processing/p5.js/network" class="social-count">
+      480
+    </a>
+  </li>
+</ul>
+
+    <h1 class="entry-title public ">
+  <svg aria-hidden="true" class="octicon octicon-repo" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M4 9h-1v-1h1v1z m0-3h-1v1h1v-1z m0-2h-1v1h1v-1z m0-2h-1v1h1v-1z m8-1v12c0 0.55-0.45 1-1 1H6v2l-1.5-1.5-1.5 1.5V14H1c-0.55 0-1-0.45-1-1V1C0 0.45 0.45 0 1 0h10c0.55 0 1 0.45 1 1z m-1 10H1v2h2v-1h3v1h5V11z m0-10H2v9h9V1z"></path></svg>
+  <span class="author" itemprop="author"><a href="https://github.com/processing" class="url fn" rel="author">processing</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="https://github.com/processing/p5.js" data-pjax="#js-repo-pjax-container">p5.js</a></strong>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax" itemscope="" itemtype="http://schema.org/BreadcrumbList" role="navigation" data-pjax="#js-repo-pjax-container">
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="https://github.com/processing/p5.js" class="js-selected-navigation-item reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /processing/p5.js" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M9.5 3l-1.5 1.5 3.5 3.5L8 11.5l1.5 1.5 4.5-5L9.5 3zM4.5 3L0 8l4.5 5 1.5-1.5L2.5 8l3.5-3.5L4.5 3z"></path></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="https://github.com/processing/p5.js/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /processing/p5.js/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7S10.14 13.7 7 13.7 1.3 11.14 1.3 8s2.56-5.7 5.7-5.7m0-1.3C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7S10.86 1 7 1z m1 3H6v5h2V4z m0 6H6v2h2V10z"></path></svg>
+        <span itemprop="name">Issues</span>
+        <span class="counter">50</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="https://github.com/processing/p5.js/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /processing/p5.js/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M11 11.28c0-1.73 0-6.28 0-6.28-0.03-0.78-0.34-1.47-0.94-2.06s-1.28-0.91-2.06-0.94c0 0-1.02 0-1 0V0L4 3l3 3V4h1c0.27 0.02 0.48 0.11 0.69 0.31s0.3 0.42 0.31 0.69v6.28c-0.59 0.34-1 0.98-1 1.72 0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.73-0.41-1.38-1-1.72z m-1 2.92c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2zM4 3c0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72 0 1.55 0 5.56 0 6.56-0.59 0.34-1 0.98-1 1.72 0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.73-0.41-1.38-1-1.72V4.72c0.59-0.34 1-0.98 1-1.72z m-0.8 10c0 0.66-0.55 1.2-1.2 1.2s-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2z m-1.2-8.8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="counter">9</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+    <a href="https://github.com/processing/p5.js/wiki" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /processing/p5.js/wiki">
+      <svg aria-hidden="true" class="octicon octicon-book" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M2 5h4v1H2v-1z m0 3h4v-1H2v1z m0 2h4v-1H2v1z m11-5H9v1h4v-1z m0 2H9v1h4v-1z m0 2H9v1h4v-1z m2-6v9c0 0.55-0.45 1-1 1H8.5l-1 1-1-1H1c-0.55 0-1-0.45-1-1V3c0-0.55 0.45-1 1-1h5.5l1 1 1-1h5.5c0.55 0 1 0.45 1 1z m-8 0.5l-0.5-0.5H1v9h6V3.5z m7-0.5H8.5l-0.5 0.5v8.5h6V3z"></path></svg>
+      Wiki
+</a>
+  <a href="https://github.com/processing/p5.js/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /processing/p5.js/pulse">
+    <svg aria-hidden="true" class="octicon octicon-pulse" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0V10h3.6L4.5 8.2l0.9 5.4L9 8.5l1.6 1.5H14V8H11.5z"></path></svg>
+    Pulse
+</a>
+  <a href="https://github.com/processing/p5.js/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /processing/p5.js/graphs">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M16 14v1H0V0h1v14h15z m-11-1H3V8h2v5z m4 0H7V3h2v10z m4 0H11V6h2v7z"></path></svg>
+    Graphs
+</a>
+
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+
+<div id="wiki-wrapper" class="wiki-wrapper page">
+<div class="gh-header">
+  <div class="gh-header-show">
+        <div class="gh-header-actions">
+          <a href="https://github.com/processing/p5.js/wiki/p5.js-overview/_edit" class="btn btn-sm ">Edit</a>
+          <a href="https://github.com/processing/p5.js/wiki/_new" class="btn btn-sm btn-primary">New Page</a>
+        </div>
+    <h1 class="gh-header-title instapaper_title">p5.js overview</h1>
+      <div class="gh-header-meta">
+        Jeremy Tubbs edited this page <time title="Dec 4, 2015, 3:05 AM EST" datetime="2015-12-04T08:05:33Z" is="relative-time">on Dec 4, 2015</time>
+        ·
+        <a href="https://github.com/processing/p5.js/wiki/p5.js-overview/_history" class="history">
+          16 revisions
+        </a>
+      </div>
+  </div>
+</div>
+<div id="wiki-content" class="wiki-content">
+  <div class="has-rightbar">
+
+  <div id="wiki-rightbar" class="wiki-rightbar">
+    <div class="wiki-pages-box readability-sidebar boxed-group flush js-wiki-pages-box " role="navigation">
+      
+<h3 class="js-wiki-toggle-collapse wiki-auxiliary-content">
+  <svg aria-hidden="true" class="octicon octicon-triangle-down caret-expanded" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M0 5l6 6 6-6H0z"></path></svg>
+  <svg aria-hidden="true" class="octicon octicon-triangle-right caret-collapsed" height="16" role="img" version="1.1" viewBox="0 0 6 16" width="6"><path d="M0 14l6-6L0 2v12z"></path></svg>
+  Pages <span class="counter">36</span>
+</h3>
+<div class="boxed-group-inner wiki-auxiliary-content wiki-auxiliary-content-no-bg">
+    <div class="filter-bar">
+      <input id="wiki-pages-filter" class="form-control input-sm input-block js-filterable-field" placeholder="Find a Page…" aria-label="Find a Page…" tabindex="2" type="text">
+    </div>
+
+  <ul class="wiki-pages" data-filterable-for="wiki-pages-filter" data-filterable-type="substring">
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki" class="wiki-page-link">Home</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/Archived-Content" class="wiki-page-link">Archived Content</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/Beyond-the-canvas" class="wiki-page-link">Beyond the canvas</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/Code-of-Conduct" class="wiki-page-link">Code of Conduct</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/Contributed-Tools,-Projects,-Demos" class="wiki-page-link">Contributed Tools, Projects, Demos</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/Design-Principles" class="wiki-page-link">Design Principles</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/Development" class="wiki-page-link">Development</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/Development---Checklist" class="wiki-page-link">Development   Checklist</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/Development-%E2%80%93-extended" class="wiki-page-link">Development – extended</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/DOM-notes" class="wiki-page-link">DOM notes</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/Education" class="wiki-page-link">Education</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/Embedding-p5.js" class="wiki-page-link">Embedding p5.js</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/Frequently-Asked-Questions" class="wiki-page-link">Frequently Asked Questions</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/Friendly-Debugger" class="wiki-page-link">Friendly Debugger</a></strong>
+    </li>
+    <li>
+      <strong><a href="https://github.com/processing/p5.js/wiki/Friendly-Error-System" class="wiki-page-link">Friendly Error System</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Getting-Started" class="wiki-page-link">Getting Started</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5" class="wiki-page-link">Getting started with WebGL in p5</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Inline-documentation" class="wiki-page-link">Inline documentation</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Instantiation-Cases" class="wiki-page-link">Instantiation Cases</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Integrating-other-libraries" class="wiki-page-link">Integrating other libraries</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Intro-to-DOM-manipulation-and-events" class="wiki-page-link">Intro to DOM manipulation and events</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Intro-to-HTML-and-CSS" class="wiki-page-link">Intro to HTML and CSS</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Issue-Labels" class="wiki-page-link">Issue Labels</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/JavaScript-basics" class="wiki-page-link">JavaScript basics</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Libraries" class="wiki-page-link">Libraries</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Loading-external-files:-AJAX,-XML,-JSON" class="wiki-page-link">Loading external files: AJAX, XML, JSON</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Local-server" class="wiki-page-link">Local server</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/p5.js-Contributors-Conference-at-CMU" class="wiki-page-link">p5.js Contributors Conference at CMU</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/p5.js-overview" class="wiki-page-link">p5.js overview</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/p5.js,-node.js,-socket.io" class="wiki-page-link">p5.js, node.js, socket.io</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Preparing-a-pull-request" class="wiki-page-link">Preparing a pull request</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Processing-transition" class="wiki-page-link">Processing transition</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Reference" class="wiki-page-link">Reference</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Release-steps" class="wiki-page-link">Release steps</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/SimpleHTTPServer" class="wiki-page-link">SimpleHTTPServer</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="https://github.com/processing/p5.js/wiki/Supported-browsers" class="wiki-page-link">Supported browsers</a></strong>
+    </li>
+    <li class="wiki-more-pages-link">
+      <a href="#" class="js-wiki-more-pages-link">
+        Show 21 more pages…
+      </a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+
+
+    <div class="clone-url">
+      <h5>Clone this wiki locally</h5>
+      <div class="input-group js-zeroclipboard-container">
+        <input class="form-control input-sm text-small text-muted input-monospace js-url-field js-zeroclipboard-target" value="https://github.com/processing/p5.js.wiki.git" readonly="readonly" type="text">
+        <span class="input-group-button">
+          <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M2 12h4v1H2v-1z m5-6H2v1h5v-1z m2 3V7L6 10l3 3V11h5V9H9z m-4.5-1H2v1h2.5v-1zM2 11h2.5v-1H2v1z m9 1h1v2c-0.02 0.28-0.11 0.52-0.3 0.7s-0.42 0.28-0.7 0.3H1c-0.55 0-1-0.45-1-1V3c0-0.55 0.45-1 1-1h3C4 0.89 4.89 0 6 0s2 0.89 2 2h3c0.55 0 1 0.45 1 1v5h-1V5H1v9h10V12zM2 4h8c0-0.55-0.45-1-1-1h-1c-0.55 0-1-0.45-1-1s-0.45-1-1-1-1 0.45-1 1-0.45 1-1 1h-1c-0.55 0-1 0.45-1 1z"></path></svg></button>
+        </span>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div id="wiki-body" class="wiki-body gollum-markdown-content instapaper_body">
+      <div class="markdown-body">
+        <p>p5.js is a JavaScript library that starts with the original goal of <a href="http://processing.org/">Processing</a>—to make coding accessible for artists, designers, educators, and beginners—and reinterprets this for today's web.</p>
+
+<p>Using the original metaphor of a software sketchbook, p5.js has a 
+full set of drawing functionality. However, you're not limited to your 
+drawing canvas, you can think of your whole browser page as your sketch!
+ For this, p5.js has <a href="http://p5js.org/libraries/">addon libraries</a> that make it easy to interact with other HTML5 objects, including text, input, video, webcam, and sound.</p>
+
+<p>p5.js is a new interpretation, not an emulation or port, and it is in active development. You can also read how this <a href="https://github.com/processing/p5.js/wiki/Frequently-Asked-Questions#how-is-this-different-than-processingjs">differs from processing.js</a>, or about how this <a href="https://github.com/processing/p5.js/wiki/Processing-transition">relates to Processing</a>.</p>
+
+<h2>
+<a id="user-content-hello-world" class="anchor" href="#hello-world" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Hello world</h2>
+
+<p>Please see the <a href="http://p5js.org/get-started/">get started</a> page for instructions for setting up your editing environment and project.</p>
+
+<p>There are two main functions you will use in your program. The <code>setup()</code>
+ block runs once, and is typically used for initialization, or for 
+creating a program that does not need a loop running code repeatedly. 
+The <code>draw()</code> block runs repeatedly, and is used for animation.</p>
+
+<p>For your first "Hello World" program, create a <code>setup()</code> block and add one line:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">setup</span>() {
+  <span class="pl-en">line</span>(<span class="pl-c1">15</span>, <span class="pl-c1">25</span>, <span class="pl-c1">70</span>, <span class="pl-c1">90</span>);
+}</pre></div>
+
+<p>If you view this in your browser, you should see a single line. </p>
+
+<p>Adding a <code>draw()</code> block enables you to incorporate animation. In the example below, a variable is updated every time <code>draw()</code> runs, moving a circle across the screen.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> x <span class="pl-k">=</span> <span class="pl-c1">0</span>;
+
+<span class="pl-k">function</span> <span class="pl-en">setup</span>() {
+  <span class="pl-en">background</span>(<span class="pl-c1">100</span>);  
+}
+
+<span class="pl-k">function</span> <span class="pl-en">draw</span>() {
+  <span class="pl-en">ellipse</span>(x, height<span class="pl-k">/</span><span class="pl-c1">2</span>, <span class="pl-c1">20</span>, <span class="pl-c1">20</span>);
+  x <span class="pl-k">=</span> x <span class="pl-k">+</span> <span class="pl-c1">1</span>;
+}</pre></div>
+
+<p>There is a full set of 2D drawing methods, to create and styles graphics, text, and images. See the <a href="http://p5js.org/reference/">reference</a> for the full listing, and the <a href="http://p5js.org/examples/">examples page</a>.</p>
+
+<h2>
+<a id="user-content-createcanvas" class="anchor" href="#createcanvas" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>createCanvas</h2>
+
+<p>By default, the drawing canvas has a size of 100x100. If you want to set a custom size, use the <code>createCanvas()</code> function. It is a good idea to always make this the first line in <code>setup()</code>. The code below sets the canvas to size 600x400:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">setup</span>() {
+  <span class="pl-en">createCanvas</span>(<span class="pl-c1">600</span>, <span class="pl-c1">400</span>);
+  <span class="pl-en">line</span>(<span class="pl-c1">15</span>, <span class="pl-c1">25</span>, <span class="pl-c1">70</span>, <span class="pl-c1">90</span>);
+}</pre></div>
+
+<p><code>createCanvas()</code> will create a new drawing canvas in the 
+size specified and append it to the html page you are working with. If 
+there is other content in the body of your html page, it will add on to 
+the page after that, so you may not see it at the top of the window. </p>
+
+<p>The canvas will also be affected by any existing css (styling) on the
+ page, including default set by your browser. For example, a lot of 
+browsers have a default padding around the end of the page. If you are 
+noticing that your canvas isn't all the way at the upper left corner of 
+your window, this is probably why. To fix this, you can add a line to 
+the <code>&lt;head&gt;</code> of your html file that overrides the default padding, like this:</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">style</span>&gt; <span class="pl-ent">body</span>{<span class="pl-c1"><span class="pl-c1">padding</span></span>:<span class="pl-c1">0</span>; <span class="pl-c1"><span class="pl-c1">margin</span></span>:<span class="pl-c1">0</span>;} &lt;/<span class="pl-ent">style</span>&gt;</span></pre></div>
+
+<p>If you would like to specify a location for the canvas, rather than appending directly to the end, you can use the <code>parent()</code> method. In the <code>&lt;body&gt;</code> of your html file, create a container where you would like your canvas to get inserted, with ID of your choice:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">'</span>myContainer<span class="pl-pds">'</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>Then use a variable to store a pointer to the canvas you created, and call <code>.parent()</code> on this variable:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">setup</span>() {
+  <span class="pl-k">var</span> myCanvas <span class="pl-k">=</span> <span class="pl-en">createCanvas</span>(<span class="pl-c1">600</span>, <span class="pl-c1">400</span>);
+  <span class="pl-smi">myCanvas</span>.<span class="pl-c1">parent</span>(<span class="pl-s"><span class="pl-pds">'</span>myContainer<span class="pl-pds">'</span></span>);
+}</pre></div>
+
+<p>The p5.js API provides a lot of functionality for creating graphics, 
+but there is some native HTML5 Canvas functionality that is not exposed 
+by p5. You can still call it directly using the variable <code>drawingContext</code>, as in the example below. See this <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D">reference</a> for the native canvas API.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">setup</span>() {
+  <span class="pl-smi">drawingContext</span>.<span class="pl-smi">shadowOffsetX</span> <span class="pl-k">=</span> <span class="pl-c1">5</span>;
+  <span class="pl-smi">drawingContext</span>.<span class="pl-smi">shadowOffsetY</span> <span class="pl-k">=</span> <span class="pl-k">-</span><span class="pl-c1">5</span>;
+  <span class="pl-smi">drawingContext</span>.<span class="pl-smi">shadowBlur</span> <span class="pl-k">=</span> <span class="pl-c1">10</span>;
+  <span class="pl-smi">drawingContext</span>.<span class="pl-smi">shadowColor</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>black<span class="pl-pds">"</span></span>;
+  <span class="pl-en">background</span>(<span class="pl-c1">200</span>);
+  <span class="pl-en">ellipse</span>(width<span class="pl-k">/</span><span class="pl-c1">2</span>, height<span class="pl-k">/</span><span class="pl-c1">2</span>, <span class="pl-c1">50</span>, <span class="pl-c1">50</span>);
+}</pre></div>
+
+<h2>
+<a id="user-content-mouse-and-touch-interaction" class="anchor" href="#mouse-and-touch-interaction" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Mouse and touch interaction</h2>
+
+<p>p5.js has a set of methods for handling mouse and touch interaction. The list below shows how they relate conceptually.</p>
+
+<table>
+<thead>
+<tr>
+<th>mouse</th>
+<th>touch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://p5js.org/reference/#p5/mouseX">mouseX</a></td>
+<td><a href="http://p5js.org/reference/#p5/touchX">touchX</a></td>
+</tr>
+<tr>
+<td><a href="http://p5js.org/reference/#p5/mouseY">mouseY</a></td>
+<td><a href="http://p5js.org/reference/#p5/touchY">touchY</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://p5js.org/reference/#p5/touches%5B%5D">touches[]</a></td>
+</tr>
+<tr>
+<td><a href="http://p5js.org/reference/#p5/mouseIsPressed">mouseIsPressed</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://p5js.org/reference/#p5/mousePressed">mousePressed()</a></td>
+<td><a href="http://p5js.org/reference/#p5/touchStarted">touchStarted()</a></td>
+</tr>
+<tr>
+<td><a href="http://p5js.org/reference/#p5/mouseMoved">mouseMoved()</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://p5js.org/reference/#p5/mouseDragged">mouseDragged()</a></td>
+<td><a href="http://p5js.org/reference/#p5/touchMoved">touchMoved()</a></td>
+</tr>
+<tr>
+<td><a href="http://p5js.org/reference/#p5/mouseReleased">mouseReleased()</a></td>
+<td><a href="http://p5js.org/reference/#p5/touchEnded">touchEnded()</a></td>
+</tr>
+<tr>
+<td><a href="http://p5js.org/reference/#p5/mouseClicked">mouseClicked()</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://p5js.org/reference/#p5/mouseScrolled">mouseScrolled()</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p>You may notice with touch, unless you have defined a <code>touchStarted()</code>
+ method, the screen may react with default touch behavior for your 
+mobile device (i.e. your whole screen view may move around when you drag
+ your finger). If you add an empty <code>touchStarted()</code> method, you should see this stop.</p>
+
+<p>Many browsers have default behaviors for various interactions. For 
+example, touchMoved on a mobile device may result in dragging the whole 
+window. To prevent these behaviors, add a <code>return false</code> line at the end of your defined functions.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">touchMoved</span>() {
+  <span class="pl-c">// do some stuff</span>
+  <span class="pl-k">return</span> <span class="pl-c1">false</span>;
+}</pre></div>
+
+<h2>
+<a id="user-content-asynchronous-calls-and-file-loading" class="anchor" href="#asynchronous-calls-and-file-loading" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Asynchronous calls and file loading</h2>
+
+<p>JS is single threaded and synchronous, meaning one line of code 
+completes before the next one runs. However, there are asynchronous 
+functions used that make the program flow faster. Loading images, 
+external files, and URLs are generally handled by async functions.</p>
+
+<h3>
+<a id="user-content-callbacks" class="anchor" href="#callbacks" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Callbacks</h3>
+
+<p>All of the load functions will accept a callback function as an 
+optional last argument. In the following example, an image is drawn once
+ it is loaded.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">setup</span>() {
+  <span class="pl-en">createCanvas</span>(<span class="pl-c1">400</span>, <span class="pl-c1">240</span>);
+  <span class="pl-en">loadImage</span>(<span class="pl-s"><span class="pl-pds">'</span>cat.jpg<span class="pl-pds">'</span></span>, drawCat);
+}
+
+<span class="pl-k">function</span> <span class="pl-en">drawCat</span>(<span class="pl-smi">img</span>) {
+  <span class="pl-en">image</span>(img, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>);
+}</pre></div>
+
+<p>Compare this to calling <code>image()</code> directly after <code>loadImage()</code>, which ends up blank:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">setup</span>() {
+  <span class="pl-en">createCanvas</span>(<span class="pl-c1">400</span>, <span class="pl-c1">240</span>);
+  <span class="pl-k">var</span> img <span class="pl-k">=</span> <span class="pl-en">loadImage</span>(<span class="pl-s"><span class="pl-pds">'</span>cat.jpg<span class="pl-pds">'</span></span>);
+  <span class="pl-en">image</span>(img, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>);
+}</pre></div>
+
+<h3>
+<a id="user-content-preload" class="anchor" href="#preload" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Preload</h3>
+
+<p>Alternatively, you could use the <code>preload()</code> function. If a <code>preload()</code> block exists it runs first, then <code>setup()</code>
+ will wait until everything in there has completed before it gets run, 
+so you can make use of things loaded in preload in setup and draw. Note 
+that nothing else should be in preload besides load calls, all other 
+initialization should happen in setup. No callbacks are required for 
+load functions in preload.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> img;
+<span class="pl-k">function</span> <span class="pl-en">preload</span>() {
+  img <span class="pl-k">=</span> <span class="pl-en">loadImage</span>(<span class="pl-s"><span class="pl-pds">'</span>cat.jpg<span class="pl-pds">'</span></span>);
+}
+
+<span class="pl-k">function</span> <span class="pl-en">setup</span>() {
+  <span class="pl-en">createCanvas</span>(<span class="pl-c1">400</span>, <span class="pl-c1">240</span>);
+  <span class="pl-en">image</span>(img, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>);
+}</pre></div>
+
+<h3>
+<a id="user-content-loading-screen" class="anchor" href="#loading-screen" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Loading Screen</h3>
+
+<p>As mentioned above, if your sketch has large media dependancies such 
+as images, audio or videos, these should be loaded into your sketch 
+using the <code>preload()</code> function. Since loading large files can
+ take some time, you might want to display a loading screen to your 
+users. This will convey that your sketch is indeed running — it just has
+ a lot of cool things to load first. To add a loading screen to your 
+p5.js sketch, all you need to do is include an HTML element on your page
+ the id <code>p5_loading</code>. It would look something like the following:</p>
+
+<p><code>&lt;div id="p5_loading" class="loadingclass"&gt;this could be some sweet graphics loading lots of bits.&lt;/div&gt;</code></p>
+
+<p>P5.js looks through your HTML to see if you have included an element with the id <code>p5_loading</code>.
+ P5.js will use this element and its content as the loading screen for 
+your sketch. Since the loading element is included in your HTML, you can
+ add any additional classes and/or style the element anyway you see fit.</p>
+
+<p>For an example of a sketch using a loading screen refer to <code>examples/loadingscreen/index.html</code> in the p5.js source.</p>
+
+<h2>
+<a id="user-content-browser-functions-and-native-javascript" class="anchor" href="#browser-functions-and-native-javascript" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Browser functions and native JavaScript</h2>
+
+<p>There are a few variables and functions that make browser interaction easier, many more to come!</p>
+
+<ul>
+<li>
+<a href="http://p5js.org/reference/#p5/windowWidth">windowWidth</a> / <a href="http://p5js.org/reference/#p5/windowHeight">windowHeight</a>
+</li>
+<li>
+<a href="http://p5js.org/reference/#p5/displayWidth">displayWidth</a> / <a href="http://p5js.org/reference/#p5/displayHeight">displayHeight</a>
+</li>
+<li>
+<a href="http://p5js.org/reference/#p5/winMouseX">winMouseX</a> / <a href="http://p5js.org/reference/#p5/winMouseY">winMouseY</a>
+</li>
+<li><a href="http://p5js.org/reference/#p5/fullscreen">fullscreen()</a></li>
+</ul>
+
+<p>You should also be able to use any native JS functions in your p5.js sketch without a problem, the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN JavaScript reference</a> is a good place to learn more. Read the next section to learn how to make p5 play extra nice with the rest of your project.</p>
+
+<h2>
+<a id="user-content-instantiation--namespace" class="anchor" href="#instantiation--namespace" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Instantiation / namespace</h2>
+
+<p>By default, all p5.js functions are in the global namespace (i.e. bound to the window object), meaning you can call them simply <code>ellipse()</code>, <code>fill()</code>,
+ etc. However, this might be inconvenient if you are mixing with other 
+JS libraries or writing long programs of your own. To solve this 
+problem, there is something we call "instance mode", where all p5 
+functions are bound up in a single variable instead of polluting your 
+global namespace.</p>
+
+<p>Consider a program like this:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> x <span class="pl-k">=</span> <span class="pl-c1">100</span>;
+<span class="pl-k">var</span> y <span class="pl-k">=</span> <span class="pl-c1">100</span>;
+
+<span class="pl-k">function</span> <span class="pl-en">setup</span>() {
+  <span class="pl-en">createCanvas</span>(<span class="pl-c1">200</span>,<span class="pl-c1">200</span>);
+}
+
+<span class="pl-k">function</span> <span class="pl-en">draw</span>() {
+  <span class="pl-en">background</span>(<span class="pl-c1">0</span>);
+  <span class="pl-en">fill</span>(<span class="pl-c1">255</span>);
+  <span class="pl-en">ellipse</span>(x,y,<span class="pl-c1">50</span>,<span class="pl-c1">50</span>);
+}</pre></div>
+
+<p>A conversion to "instance mode" looks like this:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> <span class="pl-en">s</span> <span class="pl-k">=</span> <span class="pl-k">function</span>( <span class="pl-smi">p</span> ) {
+
+  <span class="pl-k">var</span> x <span class="pl-k">=</span> <span class="pl-c1">100</span>; 
+  <span class="pl-k">var</span> y <span class="pl-k">=</span> <span class="pl-c1">100</span>;
+
+  <span class="pl-smi">p</span>.<span class="pl-en">setup</span> <span class="pl-k">=</span> <span class="pl-k">function</span>() {
+    <span class="pl-smi">p</span>.<span class="pl-en">createCanvas</span>(<span class="pl-c1">700</span>, <span class="pl-c1">410</span>);
+  };
+
+  <span class="pl-smi">p</span>.<span class="pl-en">draw</span> <span class="pl-k">=</span> <span class="pl-k">function</span>() {
+    <span class="pl-smi">p</span>.<span class="pl-c1">background</span>(<span class="pl-c1">0</span>);
+    <span class="pl-smi">p</span>.<span class="pl-en">fill</span>(<span class="pl-c1">255</span>);
+    <span class="pl-smi">p</span>.<span class="pl-en">rect</span>(x,y,<span class="pl-c1">50</span>,<span class="pl-c1">50</span>);
+  };
+};
+
+<span class="pl-k">var</span> myp5 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">p5</span>(s);</pre></div>
+
+<p>Optionally, you can specify a default container for the canvas and 
+any other elements to append to with a second argument. You can give the
+ ID of an element in your html, or an html node itself:</p>
+
+<p><code>var myp5 = new p5(s, 'myContainer');</code></p>
+
+<p>Note that creating instances like this also allows you to have more 
+than one p5 sketch on a single web page, as they will each be wrapped up
+ with their own set up variables. Of course, you could use iframes to 
+have multiple sketches in global mode.</p>
+
+<h2>
+<a id="user-content-libraries" class="anchor" href="#libraries" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Libraries</h2>
+
+<p>One of the core ideas behind p5.js is that your sketch is not just 
+the graphics canvas but the whole web page in your browser. For this 
+reason, there is the <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>
+ that makes it easy to interact with other HTML5 objects, including 
+text, hyperlink, image, input, video, audio, and webcam. There is also a
+ <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a> that provides a friendly interface to HTML5 web audio API for loading, playing, and synthesizing sounds.</p>
+
+<p>Learn how to use these libraries or develop your own <a href="http://p5js.org/libraries/">here</a>.</p>
+
+<h2>
+<a id="user-content-editor" class="anchor" href="#editor" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Editor</h2>
+
+<p>You can use any editing environment you like, in addition, a <a href="http://p5js.org/download/#editor">p5.js editor</a>
+ is in development, you can try out the alpha version now. The p5.js 
+editor handles setting up projects and runs a local server for you. You 
+can usually run p5.js sketches without a server, but it is required if 
+you are doing certain things like loading external files. Here are 
+instructions for <a href="https://github.com/processing/p5.js/wiki/Local-server">setting up a local server</a>.</p>
+
+      </div>
+
+      <div id="wiki-footer" class="wiki-footer gollum-markdown-content boxed-group">
+        <div class="boxed-group-inner wiki-auxiliary-content wiki-writable markdown-body">
+            <a href="https://github.com/processing/p5.js/wiki/_Footer/_edit" class="wiki-edit-link" title="Edit footer">
+              <svg aria-hidden="true" class="octicon octicon-pencil" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M0 12v3h3l8-8-3-3L0 12z m3 2H1V12h1v1h1v1z m10.3-9.3l-1.3 1.3-3-3 1.3-1.3c0.39-0.39 1.02-0.39 1.41 0l1.59 1.59c0.39 0.39 0.39 1.02 0 1.41z"></path></svg>
+            </a>
+          <p><a href="http://p5js.org/">http://p5js.org</a></p>
+
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+</div>
+
+
+  </div>
+  <div class="modal-backdrop"></div>
+</div>
+
+
+    </div>
+  </div>
+
+    </div>
+
+        <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com/" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com/" aria-label="Homepage" class="site-footer-mark">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" role="img" title="GitHub " version="1.1" viewBox="0 0 16 16" width="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>© 2016 <span title="0.14213s from github-fe121-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+        <li><a href="https://help.github.com/" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+    
+
+    <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M15.72 12.5l-6.85-11.98C8.69 0.21 8.36 0.02 8 0.02s-0.69 0.19-0.87 0.5l-6.85 11.98c-0.18 0.31-0.18 0.69 0 1C0.47 13.81 0.8 14 1.15 14h13.7c0.36 0 0.69-0.19 0.86-0.5S15.89 12.81 15.72 12.5zM9 12H7V10h2V12zM9 9H7V5h2V9z"></path></svg>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <svg aria-hidden="true" class="octicon octicon-x" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75-1.48-1.48 3.75-3.75L0.77 4.25l1.48-1.48 3.75 3.75 3.75-3.75 1.48 1.48-3.75 3.75z"></path></svg>
+      </button>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      
+      <script crossorigin="anonymous" integrity="sha256-fZcqMi2uFUKrt8tg8N4Hrql7FBvk4zq0LsAERY6sJfQ=" src="p5jsOverview_files/frameworks-7d972a322dae1542abb7cb60f0de07aea97b141be4e33ab42e.js"></script>
+      <script async="async" crossorigin="anonymous" integrity="sha256-fxWGKdKUjJz4odkzg3n6aKvQOLuBUpmo+wdsRVeqicg=" src="p5jsOverview_files/github-7f158629d2948c9cf8a1d9338379fa68abd038bb815299a8fb076c.js"></script>
+      
+      
+      
+        <script crossorigin="anonymous" integrity="sha256-wnQQRE6z1hvF0rLtVJDCX1YHb6GXx2xlDzQgoVGTJ0Y=" src="p5jsOverview_files/wiki-c27410444eb3d61bc5d2b2ed5490c25f56076fa197c76c650f3420a1.js"></script>
+
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M15.72 12.5l-6.85-11.98C8.69 0.21 8.36 0.02 8 0.02s-0.69 0.19-0.87 0.5l-6.85 11.98c-0.18 0.31-0.18 0.69 0 1C0.47 13.81 0.8 14 1.15 14h13.7c0.36 0 0.69-0.19 0.86-0.5S15.89 12.81 15.72 12.5zM9 12H7V10h2V12zM9 9H7V5h2V9z"></path></svg>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+    <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75-1.48-1.48 3.75-3.75L0.77 4.25l1.48-1.48 3.75 3.75 3.75-3.75 1.48 1.48-3.75 3.75z"></path></svg>
+    </button>
+  </div>
+</div>
+
+  
+
+
+</body></html>

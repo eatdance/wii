@@ -1,0 +1,47 @@
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+
+
+body {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: #747704;
+    
+}
+
+hr {
+    border: none;
+    height: 6px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+
+
+.text-muted{
+	color: #BCBBBB;
+}
+
+text-thin{
+	font-weight: 100;
+	}
+	
+.title-super{
+	font-size: 60PX;
+}
+
+.title-logo{
+	margin-top: 20px;
+}
+.o{
+	color: #FF0000;
+}
+
+
+
